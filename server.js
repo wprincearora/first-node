@@ -3,12 +3,8 @@ var app=express();
 const hbs = require('hbs');
 const fs = require('fs');
 
-var port=3000;
-try{
-port=process.erv.PORT;
-}catch(e){
+const port=process.env.PORT || 3000;
 
-}
 /* For static Website use app.use(); by providing the path for files that files can be accessed directly by its full name */
 //app.use(express.static(__dirname+'/views'));
 /*ends----*/
