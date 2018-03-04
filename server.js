@@ -2,6 +2,13 @@ const express= require('express');
 var app=express();
 const hbs = require('hbs');
 const fs = require('fs');
+
+var port=3000;
+try{
+port=process.erv.PORT;
+}catch(e){
+
+}
 /* For static Website use app.use(); by providing the path for files that files can be accessed directly by its full name */
 //app.use(express.static(__dirname+'/views'));
 /*ends----*/
@@ -37,7 +44,7 @@ title:'First Node Applications',
 paragraph:'Hey There i don\'t what to do with my life i am stuck this mortal human form '
 });
 });
-app.listen(3000,()=>{
+app.listen(port,()=>{
   console.log('Server is up on port 3000');
 });
 
