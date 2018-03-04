@@ -30,7 +30,7 @@ return text.toUpperCase();
 app.get('/projects',(req,res)=>{
 res.render('projects.hbs',{
 title:'Projects',
-paragraph:'Heres my projects'  
+paragraph:'Here\'s my projects'  
 });
 });
 app.get('/x',(req,res)=>{
