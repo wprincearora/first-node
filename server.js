@@ -18,7 +18,7 @@ fs.appendFile('server.log',log,(err)=>{
 });
 
 /*Middleware ends here*/
-app.set('view enginer','hbs');
+app.set('view engine','hbs');
 hbs.registerPartials(__dirname+'/views/partials');
 hbs.registerHelper('getCurrentYear',()=>{
 return new Date().getFullYear();
@@ -27,6 +27,12 @@ hbs.registerHelper('screamIt',(text)=>{
 return text.toUpperCase();
 });
 ///Routes...
+app.get('/projects',(req,res)=>{
+res.render('projects.hbs',{
+title:'Projects',
+paragraph:'Heres my projects'  
+});
+});
 app.get('/x',(req,res)=>{
 //res.send({hello:'skdjs'});
 res.render('about.hbs',{
