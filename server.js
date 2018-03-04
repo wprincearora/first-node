@@ -16,6 +16,7 @@ fs.appendFile('server.log',log,(err)=>{
 });
   next();//next is used for executing code further without this code will not be executed any futher
 });
+
 /*Middleware ends here*/
 app.set('view enginer','hbs');
 hbs.registerPartials(__dirname+'/views/partials');
